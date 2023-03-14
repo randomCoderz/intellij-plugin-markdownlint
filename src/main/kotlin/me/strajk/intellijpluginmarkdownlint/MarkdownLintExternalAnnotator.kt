@@ -37,7 +37,7 @@ class MarkdownLintExternalAnnotator : ExternalAnnotator<PsiFile, List<MarkdownLi
         holder: AnnotationHolder
     ) {
         val document = getDocumentFromFile(psiFile)
-        val documentLineCount = document?.getLineCount() ?: 0
+        val documentLineCount = document?.lineCount ?: 0
 
         for (error in annotationResult) {
             // TODO: Still getting java.lang.IndexOutOfBoundsException: Wrong line: XX. Available lines count: XX
